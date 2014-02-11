@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Jack, Troy, Mark-->
+<appSettings>
+  <smtpClient name="Smtp Client" description="The SMTP address for the e-mail client.">smtp.gmail.com</smtpClient>
+  <smtpPort name="Smtp Port" description="The port the SMTP server listens on.">587</smtpPort>
+  <fromAddress name="From Address" description="The e-mail address the SMTP server is configured for.">Brentwood.Test.Email@gmail.com</fromAddress>
+  <smtpPassword name="Smtp Password" description="The password of the SMTP server.">testingpassword123</smtpPassword>
+  <submitProofSubject name="Submit Proof Subject" description="The subject line of the e-mail sent to the customer when a job proof has been submitted.">Job ID {0}: {1} - Job Proof Available for Review</submitProofSubject>
+  <submitProofBody name="Submit Proof Body" description="The body of the e-mail sent to the customer when a job proof has been submitted.">Hello from Brentwood Printing, A sample image for your print job has been uploaded.  Please login at http://www.brentwoodprinting.com/ and review this item.Thank You.</submitProofBody>
+  <quoteSubject name="Quote Subject" description="The subject line of the e-mail sent to the customer when a job has been quoted.">Job Quote Available</quoteSubject>
+  <quoteBody name="Quote Body" description="The body of the e-mail sent to the customer when a job has been quoted.">A job you recently submitted has been quoted. Please login to http://www.brentwoodprinting.com/ to view and accept the quote. Thank you.</quoteBody>
+  <daysPastDue name="Days Before Invoice Past Due" description="The number of days before an invoice is considered past due. ENSURE ONLY NUMBERS ARE PUT IN HERE.">7</daysPastDue>
+  <outstandingSubject name="Outstanding Invoices E-Mail Subject" description="The subject line of the e-mail sent to the customer when an invoice is past due.">Outstanding Invoice</outstandingSubject>
+  <outstandingBody name="Outstanding Invoices E-Mail Body" description="The body of the e-mail sent to the customer when an invoice is past due.">Please be advised that you have an outstanding invoice for this job.</outstandingBody>
+</appSettings>

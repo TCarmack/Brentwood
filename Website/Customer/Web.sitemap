@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Jack-->
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Customer/CustomerDashboard.aspx" title="My Dashboard">
+      <siteMapNode url="~/Customer/Approved Customer/NewOrder.aspx" title="New Order Form" />
+      <siteMapNode url="~/Customer/Approved Customer/OrderPage.aspx" title="Additional Information" />
+      <siteMapNode url="~/Customer/Approved Customer/OrderCompletePage.aspx" title="Order Complete" />
+      <siteMapNode url="~/Customer/AccountPage.aspx" title="Account Maintenance" />
+      <siteMapNode url="~/Customer/NotApproved.aspx" title="Account Not Approved" />
+      <siteMapNode title="Corporate Account">
+        <siteMapNode url="~/Customer/Admin/CorporateAccount.aspx" title="Corporate Account Management" />
+        <siteMapNode url="~/Customer/Admin/ArchivedUsers.aspx" title="Archived Corporate Users" />
+        <siteMapNode url="~/Customer/Admin/ManageUsers.aspx" title="Corporate Account User Management" />
+        <siteMapNode url="~/Customer/Admin/NewCorporateAccount.aspx" title="Create Corporate Account" />
+        <siteMapNode url="~/Customer/Admin/NewUser.aspx" title="New Corporate User Account" />
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

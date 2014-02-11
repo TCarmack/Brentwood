@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Customer.master.cs" Inherits="SiteMaster" %>
+<!--Jack-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-1.4.1.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    brentwood printing - Customer area
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Customer/CustomerDashboard.aspx" 
+                            Text="My Dashboard" />
+                        <asp:MenuItem NavigateUrl="~/Customer/AccountPage.aspx" Text="Edit Account" 
+                            Value="Edit Account"></asp:MenuItem>
+                        <asp:MenuItem Selectable="False" Text="Corporate Accounts" 
+                            Value="Corporate Accounts">
+                            <asp:MenuItem NavigateUrl="~/Customer/Admin/NewCorporateAccount.aspx" 
+                                Text="New Corporate Account" Value="New Corporate Account"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer/Admin/CorporateAccount.aspx" 
+                                Text="Manage Account" Value="Manage Account"></asp:MenuItem>
+                            <asp:MenuItem Selectable="False" Text="User Management" Value="User Management">
+                                <asp:MenuItem NavigateUrl="~/Customer/Admin/NewUser.aspx" Text="New User" 
+                                    Value="New User"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/Admin/ManageUsers.aspx" 
+                                    Text="User Management" Value="User Management"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/Admin/ArchivedUsers.aspx" 
+                                    Text="Archived Users" Value="Archived Users"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Orders" Value="Orders" Selectable="False">
+                            <asp:MenuItem NavigateUrl="~/Customer/Approved Customer/NewOrder.aspx" 
+                                Text="New Order" Value="New Order"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="Customer">
+                </asp:SiteMapPath>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

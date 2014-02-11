@@ -1,0 +1,8 @@
+1. Open up SQL Server
+2. Select any database
+3. Right-click->Tasks->Generate Scripts
+4. Open the outputted file
+5. On lines 5 and 7, there's a folder path. Copy the folder path (without the filename or
+	extension, and replace the folder path on lines 5 and 7 of the script given here 
+	with that).
+6. Run the script (F5)

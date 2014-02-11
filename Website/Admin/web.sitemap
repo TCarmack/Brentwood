@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Jack-->
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Admin/AdminDashboard.aspx" title="Dashboard">
+      <siteMapNode url="~/Admin/Jobs/JobsByCustomer.aspx" title="Jobs By Customer" />
+      <siteMapNode title="Job Types">
+        <siteMapNode url="~/Admin/Job Types/NewJobType.aspx" title="New Job Type" />
+        <siteMapNode url="~/Admin/Job Types/JobTypes.aspx" title="Job Types"/>
+        <siteMapNode url="~/Admin/Job Types/ArchivedJobTypes.aspx" title="Archived Job Types" />
+        <siteMapNode url="~/Admin/Job Types/JobTypePage.aspx" title="Job Type Page" />
+      </siteMapNode>
+      <siteMapNode url="~/Admin/Accounts/Company/Companies.aspx" title="Companies">
+        <siteMapNode url="~/Admin/Accounts/Company/ArchivedCompany.aspx" title="Archived Companies" />
+        <siteMapNode url="~/Admin/Accounts/Company/CompanyPage.aspx" title="Edit Company" />
+        <siteMapNode url="~/Admin/Accounts/Company/NewCompany.aspx" title="New Company" />
+      </siteMapNode>
+      <siteMapNode url="~/Admin/Accounts/UserAccounts.aspx" title="User Accounts">
+        <siteMapNode url="~/Admin/Accounts/Customer/Customers.aspx" title="Customer Accounts">
+          <siteMapNode url="~/Admin/Accounts/Customer/NewCustomer.aspx" title="New Customer Account" />
+          <siteMapNode url="~/Admin/Accounts/Customer/ArchivedCustomers.aspx" title="Archived Customer Accounts" />
+          <siteMapNode url="~/Admin/Accounts/Customer/CustomerPage.aspx" title="Customer Accounts" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/Accounts/Employee/EmployeeAccounts.aspx" title="Employee Accounts">
+          <siteMapNode url="~/Admin/Accounts/Employee/CreateEmployeeAccount.aspx" title="New Employee Account" />
+          <siteMapNode url="~/Admin/Accounts/Employee/ArchivedEmployees.aspx" title="Archived Employee Accounts" />
+          <siteMapNode url="~/Admin/Accounts/Employee/EmployeePage.aspx" title="Employee Accounts" />
+          <siteMapNode url="~/Admin/EmployeeRole/EmployeeRoles.aspx" title="Employee Roles" />
+          <siteMapNode url="~/Admin/EmployeeRole/ArchivedEmployeeRoles.aspx" title="Archived Employee Roles" />
+        </siteMapNode>
+        <siteMapNode url="~/Admin/JobStatusesPage.aspx" title="Job Statuses" />
+        <siteMapNode url="~/Admin/ArchivedJobStatuses.aspx" title="Archived Job Statuses" />
+      </siteMapNode>
+      <siteMapNode url="~/Admin/SiteSettings.aspx" title="App Settings" />
+      <siteMapNode url="~/Admin/Invoicing/Invoicing.aspx" title="Invoicing" />
+    </siteMapNode>
+</siteMap>

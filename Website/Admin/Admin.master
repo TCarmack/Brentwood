@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="SiteMaster" %>
+<!--Jack-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-1.4.1.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    brentwood printing - admin
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Admin/AdminDashboard.aspx" Text="My Dashboard" 
+                            Value="My Dashboard"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/Jobs/JobsByCustomer.aspx" 
+                            Text="Jobs By Customer" Value="Jobs By Customer"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/Accounts/UserAccounts.aspx" Text="Accounts" 
+                            Value="Accounts">
+                            <asp:MenuItem NavigateUrl="~/Admin/Accounts/Company/Companies.aspx" 
+                                Text="Company" Value="Company">
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Company/NewCompany.aspx" 
+                                    Text="New Account" Value="New Account"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Company/ArchivedCompany.aspx" 
+                                    Text="Archived Accounts" Value="Archived Accounts"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Accounts/Customer/Customers.aspx" 
+                                Text="Customers" Value="Customers">
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Customer/NewCustomer.aspx" 
+                                    Text="New Account" Value="New Account"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Customer/ArchivedCustomers.aspx" 
+                                    Text="Archived Accounts" Value="Archived Accounts"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Accounts/Employee/EmployeeAccounts.aspx" 
+                                Text="Employee" Value="Employee">
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Employee/CreateEmployeeAccount.aspx" 
+                                    Text="New Account" Value="New Account"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/Accounts/Employee/ArchivedEmployees.aspx" 
+                                    Text="Archived Accounts" Value="Archived Accounts"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin/EmployeeRole/EmployeeRoles.aspx" 
+                                    Text="Employee Roles" Value="Employee Roles">
+                                    <asp:MenuItem NavigateUrl="~/Admin/EmployeeRole/ArchivedEmployeeRoles.aspx" 
+                                        Text="Archived Employee Roles" Value="Archived Employee Roles">
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/JobStatuses/JobStatusesPage.aspx" 
+                            Text="Job Statuses" Value="Job Statuses">
+                            <asp:MenuItem NavigateUrl="~/Admin/JobStatuses/ArchivedJobStatuses.aspx" 
+                                Text="Archived Job Statuses" Value="Archived Job Statuses"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Job Types" Value="Job Types" 
+                            NavigateUrl="~/Admin/Job Types/JobTypes.aspx">
+                            <asp:MenuItem NavigateUrl="~/Admin/Job Types/NewJobType.aspx" 
+                                Text="New Job Type" Value="New Job Type"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Job Types/ArchivedJobTypes.aspx" 
+                                Text="Archived Job Types" Value="Archived Job Types"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/Invoicing/Invoicing.aspx" Text="Invoicing" 
+                            Value="Invoicing"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/SiteSettings.aspx" Text="App Settings" 
+                            Value="App Settings"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="Admin">
+                </asp:SiteMapPath>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
